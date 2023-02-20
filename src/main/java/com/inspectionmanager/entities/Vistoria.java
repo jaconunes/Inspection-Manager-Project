@@ -1,5 +1,6 @@
 package com.inspectionmanager.entities;
 
+import com.inspectionmanager.dto.Endereco;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -13,6 +14,8 @@ public class Vistoria {
     private UUID id;
     private LocalDateTime data;
     private String tipo;
+    private Integer codigoImovel;
+    private Endereco endereco;
 
 
 }
