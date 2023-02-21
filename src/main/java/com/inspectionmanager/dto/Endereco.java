@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Endereco {
+
     private String cep;
     private String logradouro;
     private String complemento;
@@ -18,4 +19,5 @@ public class Endereco {
     private String gia;
     private String ddd;
     private String siafi;
+
 }

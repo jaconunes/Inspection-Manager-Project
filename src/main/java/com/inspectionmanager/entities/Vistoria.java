@@ -1,21 +1,30 @@
 package com.inspectionmanager.entities;
 
-import com.inspectionmanager.dto.Endereco;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Vistoria {
 
     @Id
-    private UUID id;
-    private LocalDateTime data;
-    private String tipo;
-    private Integer codigoImovel;
-    private Endereco endereco;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private LocalDateTime date;
+    private String type;
+    private Integer propertyId;
+    private String street;
+    private String number;
+    private String complement;
+    private String neighbor;
+    private String condominium;
+    @OneToMany
+    @JoinColumn(name = "orcamento_id", nullable = false)
+    private Orcamento orcamento;
 
 
 }
