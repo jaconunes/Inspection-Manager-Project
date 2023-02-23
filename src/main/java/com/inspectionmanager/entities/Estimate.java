@@ -7,15 +7,15 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Orcamento {
+public class Estimate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String description;
     @ManyToOne
-    @JoinColumn(name = "vistoria_id", nullable = false)
-    private Vistoria vistoria;
+    @JoinColumn(name = "survey_id", nullable = false)
+    private Survey survey;
     private Double price;
 
 

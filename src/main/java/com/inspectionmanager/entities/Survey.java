@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
-public class Vistoria {
+public class Survey {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,9 +22,11 @@ public class Vistoria {
     private String complement;
     private String neighbor;
     private String condominium;
+    private String locatorName;
+    private String renterName;
     @OneToMany
     @JoinColumn(name = "orcamento_id", nullable = false)
-    private Orcamento orcamento;
+    private Estimate estimate;
 
 
 }

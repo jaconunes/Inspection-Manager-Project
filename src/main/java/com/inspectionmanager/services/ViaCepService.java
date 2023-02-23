@@ -1,6 +1,6 @@
 package com.inspectionmanager.services;
 
-import com.inspectionmanager.dto.Endereco;
+import com.inspectionmanager.dto.Address;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface ViaCepService {
 
     @RequestMapping(method = RequestMethod.GET, value = "/{cep}/json/")
-    Endereco consultarCep(@PathVariable("cep") String cep);
+    Address consultarCep(@PathVariable("cep") String cep);
 }

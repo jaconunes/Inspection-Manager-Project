@@ -1,10 +1,10 @@
 package com.inspectionmanager.repositories;
 
-import com.inspectionmanager.entities.Orcamento;
+import com.inspectionmanager.entities.Survey;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrcamentoRepository extends JpaRepository<Orcamento, Long> {
+public interface SurveyRepository extends JpaRepository<Survey, Long> {
 
 }
