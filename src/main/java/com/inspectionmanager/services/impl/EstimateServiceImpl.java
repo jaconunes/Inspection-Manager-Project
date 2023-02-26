@@ -4,10 +4,12 @@ import com.inspectionmanager.entities.Estimate;
 import com.inspectionmanager.repositories.EstimateRepository;
 import com.inspectionmanager.services.EstimateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EstimateServiceImpl implements EstimateService {
 
     @Autowired

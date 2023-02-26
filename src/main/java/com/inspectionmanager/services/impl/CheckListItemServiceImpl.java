@@ -4,10 +4,12 @@ import com.inspectionmanager.entities.CheckListItem;
 import com.inspectionmanager.repositories.CheckListItemRepository;
 import com.inspectionmanager.services.CheckListItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CheckListItemServiceImpl implements CheckListItemService {
 
     @Autowired
@@ -21,8 +23,8 @@ public class CheckListItemServiceImpl implements CheckListItemService {
 
     @Override
     public CheckListItem findById(Long id) {
-        Optional<CheckListItem> surveyDb = checkListItemRepository.findById(id);
-        return surveyDb.get();
+        Optional<CheckListItem> checkListItemDb = checkListItemRepository.findById(id);
+        return checkListItemDb.get();
     }
 
     @Override

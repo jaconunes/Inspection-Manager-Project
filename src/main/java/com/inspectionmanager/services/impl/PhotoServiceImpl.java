@@ -4,10 +4,12 @@ import com.inspectionmanager.entities.Photo;
 import com.inspectionmanager.repositories.PhotoRespository;
 import com.inspectionmanager.services.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PhotoServiceImpl implements PhotoService {
 
     @Autowired
