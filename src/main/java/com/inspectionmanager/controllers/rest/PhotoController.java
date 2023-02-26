@@ -1,4 +1,4 @@
-package com.inspectionmanager.controllers;
+package com.inspectionmanager.controllers.rest;
 
 import com.inspectionmanager.entities.Photo;
 import com.inspectionmanager.services.PhotoService;

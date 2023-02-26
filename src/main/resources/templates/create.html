@@ -9,12 +9,15 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
           crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
     <title>Cadastro de Vistorias</title>
 </head>
 <body>
 <div class="container">
     <h1 class="text-center m-5">Cadastro de Vistorias</h1>
-    <form>
+    <form method="POST" action="/create">
         <div class="container">
             <div class="row">
                 <div class="mb-3 col-12 col-md-4">
@@ -62,17 +65,17 @@
                         <label for="exampleInputEmail1" class="form-label">Data da Saída</label>
                         <input type="date" class="form-control" name="departureDate">
                     </div>
-                    <div class="mb-3 col-12">
-                        <label for="exampleFormControlTextarea1">Observações Finais</label>
-                        <textarea class="form-control" rows="3" name="finalremarks"></textarea>
-                    </div>
-                <div class="mb-3 col-12 col-md-4">
-                    <label for="exampleInputEmail1" class="form-label">Leitura Celesc: </label>
-                    <input type="number" class="form-control" name="propertyId">
-                </div>
+<!--                    <div class="mb-3 col-12">-->
+<!--                        <textarea class="form-control" rows="3" name="finalremarks" placeholder="Observações Finais"></textarea>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3 col-12 col-md-4">-->
+<!--                        <input type="number" class="form-control" name="propertyId" placeholder="Leitura Celesc">-->
+<!--                    </div>-->
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
             </div>
+
         </div>
     </form>
 </div>

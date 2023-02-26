@@ -1,4 +1,4 @@
-package com.inspectionmanager.controllers;
+package com.inspectionmanager.controllers.rest;
 
 import com.inspectionmanager.entities.Survey;
 import com.inspectionmanager.services.SurveyService;

@@ -1,4 +1,4 @@
-package com.inspectionmanager.controllers;
+package com.inspectionmanager.controllers.rest;
 
 import com.inspectionmanager.entities.CheckListItem;
 import com.inspectionmanager.services.CheckListItemService;
