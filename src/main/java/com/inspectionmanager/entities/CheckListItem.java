@@ -1,9 +1,6 @@
 package com.inspectionmanager.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +14,15 @@ public class CheckListItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+
+    private String description;
+
     private String status;
+
+    private String additionalRemark;
+
+    @ManyToOne
+    @JoinColumn(name = "ROOM_ID", nullable = false)
+    private Long roomId;
+
 }

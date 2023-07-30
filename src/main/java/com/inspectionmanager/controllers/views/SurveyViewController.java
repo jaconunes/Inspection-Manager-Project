@@ -1,6 +1,6 @@
 package com.inspectionmanager.controllers.views;
 
-import com.inspectionmanager.entities.Survey;
+import com.inspectionmanager.entities.Inspect;
 import com.inspectionmanager.services.SurveyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +20,8 @@ public class SurveyViewController {
     }
 
     @PostMapping("/create")
-    public String create(Survey survey){
-        surveyService.insert(survey);
+    public String create(Inspect inspect){
+        surveyService.insert(inspect);
 
         return "redirect:/survey-edit";
     }

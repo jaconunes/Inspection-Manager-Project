@@ -1,6 +1,6 @@
 package com.inspectionmanager.controllers.rest;
 
-import com.inspectionmanager.entities.Survey;
+import com.inspectionmanager.entities.Inspect;
 import com.inspectionmanager.services.SurveyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,25 +16,25 @@ public class SurveyController {
     private SurveyService surveyService;
 
     @GetMapping
-    public ResponseEntity<List<Survey>> findAll(){
+    public ResponseEntity<List<Inspect>> findAll(){
         return ResponseEntity.ok(surveyService.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Survey> findById(@PathVariable("id") Long id){
+    public ResponseEntity<Inspect> findById(@PathVariable("id") Long id){
         return ResponseEntity.ok(surveyService.findById(id));
     }
 
     @PostMapping
-    public ResponseEntity<Survey> insert(@RequestBody Survey survey){
-        surveyService.insert(survey);
-        return ResponseEntity.ok(survey);
+    public ResponseEntity<Inspect> insert(@RequestBody Inspect inspect){
+        surveyService.insert(inspect);
+        return ResponseEntity.ok(inspect);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Survey> update(@PathVariable("id") Long id, @RequestBody Survey survey){
-        surveyService.update(id, survey);
-        return ResponseEntity.ok(survey);
+    public ResponseEntity<Inspect> update(@PathVariable("id") Long id, @RequestBody Inspect inspect){
+        surveyService.update(id, inspect);
+        return ResponseEntity.ok(inspect);
     }
 
     @DeleteMapping("/{id}")

@@ -1,7 +1,5 @@
 package com.inspectionmanager.services;
 
-import com.inspectionmanager.entities.Estimate;
-
 import java.util.List;
 
 public interface EstimateService {

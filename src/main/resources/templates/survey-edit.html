@@ -28,11 +28,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-th-each="survey : ${surveys}">
-                <td data-th-text="${survey.id}"></td>
-                <td data-th-text="${{survey.date}}"></td>
-                <td data-th-text="${survey.propertyId}"></td>
-                <td data-th-text="${survey.id}"></td>
+            <tr data-th-each="inspect : ${surveys}">
+                <td data-th-text="${inspect.id}"></td>
+                <td data-th-text="${{inspect.date}}"></td>
+                <td data-th-text="${inspect.propertyId}"></td>
+                <td data-th-text="${inspect.id}"></td>
             </tr>
             </tbody>
         </table>

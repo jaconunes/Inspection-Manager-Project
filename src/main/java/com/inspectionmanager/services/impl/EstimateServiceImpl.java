@@ -1,6 +1,5 @@
 package com.inspectionmanager.services.impl;
 
-import com.inspectionmanager.entities.Estimate;
 import com.inspectionmanager.repositories.EstimateRepository;
 import com.inspectionmanager.services.EstimateService;
 import org.springframework.beans.factory.annotation.Autowired;

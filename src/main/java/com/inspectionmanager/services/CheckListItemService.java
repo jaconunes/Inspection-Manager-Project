@@ -1,7 +1,6 @@
 package com.inspectionmanager.services;
 
 import com.inspectionmanager.entities.CheckListItem;
-import com.inspectionmanager.entities.Survey;
 
 import java.util.List;
 

@@ -1,18 +1,18 @@
 package com.inspectionmanager.services;
 
-import com.inspectionmanager.entities.Survey;
+import com.inspectionmanager.entities.Inspect;
 
 import java.util.List;
 
 public interface SurveyService {
 
-    List<Survey> findAll();
+    List<Inspect> findAll();
 
-    Survey findById(Long id);
+    Inspect findById(Long id);
 
-    void insert(Survey vistoria);
+    void insert(Inspect vistoria);
 
-    void update(Long id, Survey cliente);
+    void update(Long id, Inspect cliente);
 
     void delete(Long id);
 }

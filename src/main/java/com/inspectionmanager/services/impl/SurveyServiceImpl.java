@@ -1,7 +1,7 @@
 package com.inspectionmanager.services.impl;
 
 import com.inspectionmanager.dto.Address;
-import com.inspectionmanager.entities.Survey;
+import com.inspectionmanager.entities.Inspect;
 import com.inspectionmanager.repositories.SurveyRepository;
 import com.inspectionmanager.services.ViaCepService;
 import com.inspectionmanager.services.SurveyService;
@@ -21,24 +21,24 @@ public class SurveyServiceImpl implements SurveyService {
     private ViaCepService viaCepService;
 
     @Override
-    public List<Survey> findAll() {
+    public List<Inspect> findAll() {
         return vistoriaRepository.findAll();
     }
 
     @Override
-    public Survey findById(Long id) {
-        Optional<Survey> vistoriaBd = vistoriaRepository.findById(id);
+    public Inspect findById(Long id) {
+        Optional<Inspect> vistoriaBd = vistoriaRepository.findById(id);
         return vistoriaBd.get();
     }
 
     @Override
-    public void insert(Survey vistoria) {
+    public void insert(Inspect vistoria) {
         vistoriaRepository.save(vistoria);
     }
 
     @Override
-    public void update(Long id, Survey vistoria) {
-        Optional<Survey> vistoriaBd = vistoriaRepository.findById(id);
+    public void update(Long id, Inspect vistoria) {
+        Optional<Inspect> vistoriaBd = vistoriaRepository.findById(id);
         if(vistoriaBd.isPresent()){
             vistoriaRepository.save(vistoria);
         }

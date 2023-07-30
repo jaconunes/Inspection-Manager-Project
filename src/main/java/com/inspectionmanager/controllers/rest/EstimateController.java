@@ -1,6 +1,5 @@
 package com.inspectionmanager.controllers.rest;
 
-import com.inspectionmanager.entities.Estimate;
 import com.inspectionmanager.services.EstimateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

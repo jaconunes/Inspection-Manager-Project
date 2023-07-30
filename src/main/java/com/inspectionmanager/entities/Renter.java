@@ -1,15 +1,16 @@
 package com.inspectionmanager.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Room {
+public class Renter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,10 +18,10 @@ public class Room {
 
     private String name;
 
-    private String additionalRemark;
+    private String cpfCnpj;
 
-    @ManyToOne
-    @JoinColumn(name = "INSPECT_ID", nullable = false)
-    private Long inspectId;
+    private String email;
+
+    private String phone;
 
 }
