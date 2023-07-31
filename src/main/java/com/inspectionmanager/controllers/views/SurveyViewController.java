@@ -1,7 +1,7 @@
 package com.inspectionmanager.controllers.views;
 
 import com.inspectionmanager.entities.Inspect;
-import com.inspectionmanager.services.SurveyService;
+import com.inspectionmanager.services.InspectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class SurveyViewController {
 
     @Autowired
-    private SurveyService surveyService;
+    private InspectService inspectService;
 
     @GetMapping("surveys/create")
     public String home(){
@@ -21,7 +21,7 @@ public class SurveyViewController {
 
     @PostMapping("/create")
     public String create(Inspect inspect){
-        surveyService.insert(inspect);
+        inspectService.insert(inspect);
 
         return "redirect:/survey-edit";
     }
@@ -29,7 +29,7 @@ public class SurveyViewController {
     @GetMapping("/survey-edit")
     public ModelAndView list(){
         ModelAndView mv = new ModelAndView("survey-edit");
-        mv.addObject("surveys", surveyService.findAll());
+        mv.addObject("surveys", inspectService.findAll());
 
         return mv;
     }

@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("surveys")
-public class SurveyController {
+@RequestMapping("inspects")
+public class InspectController {
 
     @Autowired
     private InspectService inspectService;

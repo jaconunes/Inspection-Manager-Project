@@ -2,9 +2,9 @@ package com.inspectionmanager.services.impl;
 
 import com.inspectionmanager.dto.Address;
 import com.inspectionmanager.entities.Inspect;
-import com.inspectionmanager.repositories.SurveyRepository;
+import com.inspectionmanager.repositories.InspectRepository;
 import com.inspectionmanager.services.ViaCepService;
-import com.inspectionmanager.services.SurveyService;
+import com.inspectionmanager.services.InspectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,41 +12,41 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SurveyServiceImpl implements SurveyService {
+public class InspectServiceImpl implements InspectService {
 
     @Autowired
-    private SurveyRepository vistoriaRepository;
+    private InspectRepository inspectRepository;
 
     @Autowired
     private ViaCepService viaCepService;
 
     @Override
     public List<Inspect> findAll() {
-        return vistoriaRepository.findAll();
+        return inspectRepository.findAll();
     }
 
     @Override
     public Inspect findById(Long id) {
-        Optional<Inspect> vistoriaBd = vistoriaRepository.findById(id);
+        Optional<Inspect> vistoriaBd = inspectRepository.findById(id);
         return vistoriaBd.get();
     }
 
     @Override
     public void insert(Inspect vistoria) {
-        vistoriaRepository.save(vistoria);
+        inspectRepository.save(vistoria);
     }
 
     @Override
     public void update(Long id, Inspect vistoria) {
-        Optional<Inspect> vistoriaBd = vistoriaRepository.findById(id);
-        if(vistoriaBd.isPresent()){
-            vistoriaRepository.save(vistoria);
+        Optional<Inspect> inspectBd = inspectRepository.findById(id);
+        if(inspectBd.isPresent()){
+            inspectRepository.save(vistoria);
         }
     }
 
     @Override
     public void delete(Long id) {
-        vistoriaRepository.deleteById(id);
+        inspectRepository.deleteById(id);
     }
 
     public Address findAddressByCep(String cep){
