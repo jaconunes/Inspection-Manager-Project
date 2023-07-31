@@ -1,16 +1,18 @@
 package com.inspectionmanager.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "TINSPECT")
 public class Inspect {
 
     @Id
@@ -36,18 +38,18 @@ public class Inspect {
 
     @ManyToOne
     @JoinColumn(name = "USER_ID", nullable = false)
-    private Long userId;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "CUSTOMER_ID", nullable = false)
-    private Long customerId;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "PROPERTY_ID", nullable = false)
-    private Long propertyId;
+    private Property property;
 
     @ManyToOne
     @JoinColumn(name = "RENTER_ID", nullable = false)
-    private Long renterId;
+    private Renter renter;
 
 }

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "TITEM")
 public class CheckListItem {
 
     @Id
@@ -23,6 +24,6 @@ public class CheckListItem {
 
     @ManyToOne
     @JoinColumn(name = "ROOM_ID", nullable = false)
-    private Long roomId;
+    private Room room;
 
 }

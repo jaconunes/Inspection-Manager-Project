@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "TPHOTO")
 public class Photo {
 
     @Id
@@ -19,6 +20,6 @@ public class Photo {
 
     @ManyToOne
     @JoinColumn(name = "ROOM_ID", nullable = false)
-    private Long roomId;
+    private Room room;
 
 }

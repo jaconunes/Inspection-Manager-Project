@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "TROOM")
 public class Room {
 
     @Id
@@ -21,6 +22,6 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "INSPECT_ID", nullable = false)
-    private Long inspectId;
+    private Inspect inspect;
 
 }

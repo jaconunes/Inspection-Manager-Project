@@ -1,6 +1,7 @@
 package com.inspectionmanager.services;
 
 import com.inspectionmanager.entities.Owner;
+import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 

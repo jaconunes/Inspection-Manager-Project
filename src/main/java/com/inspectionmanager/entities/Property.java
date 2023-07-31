@@ -10,6 +10,7 @@ import java.util.Date;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "TPROPERTY")
 public class Property {
 
     @Id
@@ -32,6 +33,6 @@ public class Property {
 
     @ManyToOne
     @JoinColumn(name = "OWNER_ID", nullable = false)
-    private Long ownerId;
+    private Owner owner;
 
 }

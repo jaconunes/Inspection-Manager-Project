@@ -5,10 +5,12 @@ import com.inspectionmanager.entities.Owner;
 import com.inspectionmanager.repositories.OwnerRepository;
 import com.inspectionmanager.services.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class OwnerServiceImpl implements OwnerService {
 
     @Autowired

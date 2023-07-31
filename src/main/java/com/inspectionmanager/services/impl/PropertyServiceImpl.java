@@ -4,10 +4,12 @@ import com.inspectionmanager.entities.Property;
 import com.inspectionmanager.repositories.PropertyRepository;
 import com.inspectionmanager.services.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PropertyServiceImpl implements PropertyService {
 
     @Autowired
