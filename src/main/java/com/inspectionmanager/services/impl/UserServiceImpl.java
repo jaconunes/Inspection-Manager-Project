@@ -4,6 +4,7 @@ import com.inspectionmanager.entities.User;
 import com.inspectionmanager.repositories.UserRepository;
 import com.inspectionmanager.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +24,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findById(Long id) {
         return userRepository.findById(id).get();
+    }
+
+    @Override
+    public UserDetails findByUserName(String userName) {
+        return userRepository.findByUserName(userName);
     }
 
     @Override
