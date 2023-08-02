@@ -1,8 +1,10 @@
 package com.inspectionmanager.controllers.rest;
 
 import com.inspectionmanager.dto.AuthenticationDto;
+import com.inspectionmanager.dto.LoginResponseDto;
 import com.inspectionmanager.dto.RegisterDto;
 import com.inspectionmanager.entities.User;
+import com.inspectionmanager.services.TokenService;
 import com.inspectionmanager.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,9 @@ public class AuthenticationController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
+    private TokenService tokenService;
+
+    @Autowired
     private UserService userService;
 
     @PostMapping("/login")
@@ -30,7 +35,9 @@ public class AuthenticationController {
         var usernamePassword = new UsernamePasswordAuthenticationToken(data.userName(), data.password());
         var auth = this.authenticationManager.authenticate(usernamePassword);
 
-        return ResponseEntity.ok().build();
+        var token = tokenService.generateToken((User) auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDto(token));
     }
 
     @PostMapping("/register")
